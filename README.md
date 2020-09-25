@@ -100,3 +100,35 @@ You are now good to go - you can turn the bot on/off and restart using the nativ
 Now is time to get the vSphere plugin running
 
 ### PoshBot.vSphere plugin configuration
+Adding and configuring the vSphere Poshbot plugin can be accomplished with the following steps
+1. Download or clone this repository.  Ensure that you place the included PoshBot.vSphere (not the wrapper folder) into one of your supported module paths (`$env.PSModulePath`) or the `c:\Poshbot\plugins` directory
+2. Add the following configuration to the `PluginConfiguration` hashtable inside your Poshbot configuration file. If following along here, that would be `c:\poshbot\config.psd1`.  Replace the valueds with your desired vCenter you would like to manage.
+```
+  PluginConfiguration = @{
+    'PoshBot.vSphere' = @{
+      Connection = @{
+        Server   = 'vcenter.fqdn'
+        Username = 'username'
+        Password = 'password'
+      }
+    }
+  }
+  ```
+  3. Restart your PoshBot service to include the newly modified configuration
+  4. Issue the following command to install the plugin into your poshbot instance
+  ```
+  !installplugin PoshBot.vSphere
+  ```
+  5. You should be able to now issue commands to your vSphere Poshbot instance. For instance, to see a list of the vms, you could run the following command
+  ```
+  !getvm
+  ```
+
+  That's it, your done, Happy Chatting
+  ## Contributing
+  We will gladly accept any code and non code contributions to this project through Pull Requests on this repository.  A few things to keep in mind.
+  - Any commands that you want to be public (executable from slack) need to be placed in their own file under the `Public` directory
+  - Any commands that are private in nature, and could be reusable should be placed in the `Private` directory
+  - In order for a command to be available, it must be added to the `FunctionsToExport` array inside `PoshBot.vSphere.psd1`
+  - We will soon have the requirement for unit tests as well, but in the effort to get this project moving, they are not required at the moment
+  - Simply issue a Pull request with your desired changes to the master branch of this repository, we will review, and merge - Easy Peasy!
