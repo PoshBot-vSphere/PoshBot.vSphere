@@ -49,3 +49,54 @@ $pbc = New-PoshBotConfiguration @BotParams
 Save-PoshBotConfiguration -InputObject $pbc -Path $PoshbotConfig
 ```
 
+At this point you are good to go in terms of Poshbot.  You could, if you wanted start the bot by executing `Start-PoshBot -Configuration $pbc -Verbose`.  That said, it's better to set PoshBot up to run as a service.  Again, we will follow the process laid out in [this blog](http://ramblingcookiemonster.github.io/PoshBot/).  To get started, you will need nssm to create the service, you can find that [here](https://nssm.cc/)
+
+5. Create Start-Poshbot.ps1 - create a new file called `Start-Poshbot.ps1` within your `c:\Poshbot` directory with the following code
+```
+Import-Module PoshBot -force
+$pbc = Get-PoshBotConfiguration -Path C:\poshbot\config.psd1
+
+while($True)
+{
+    try
+    {
+        $err = $null
+        Start-PoshBot -Configuration $pbc -Verbose -ErrorVariable err
+        if($err)
+        {
+            throw $err
+        }
+    }
+    catch
+    {
+        $_ | Format-List -Force | Out-String | Out-File (Join-Path $pbc.LogDirectory Service.Error)
+    }
+}
+```
+
+6. Create the service based off of `Start-Poshbot`.  Execute the folowing to create a new service within Windows to control your Poshbot
+```
+$nssm = 'C:\nssm.exe'
+
+$ServiceName = 'poshbot'
+$ServicePath = 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+$ServiceArguments = "-ExecutionPolicy Bypass -NoProfile -File C:\poshbot\start-poshbot.ps1"
+
+& $nssm install $ServiceName $ServicePath $ServiceArguments
+Start-Sleep -Seconds .5
+
+# check the status... should be stopped
+& $nssm status $ServiceName
+
+# start things up!
+& $nssm start $ServiceName
+
+# verify it's running
+& $nssm status $ServiceName
+```
+
+You are now good to go - you can turn the bot on/off and restart using the native windows services control.  You should be able to head into slack and send your bot one of the generic built in commands such as `!help` or `!about`
+
+Now is time to get the vSphere plugin running
+
+### PoshBot.vSphere plugin configuration
