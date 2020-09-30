@@ -72,6 +72,7 @@
     # FunctionsToExport = '*'
     FunctionsToExport = @(
         'Get-PBVM',
+        'Stop-PBVMGuest',
         'Get-PBHost'
     )
 
