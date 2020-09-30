@@ -1,7 +1,7 @@
 function AddNote-PBVM {
     <#
     .SYNOPSIS
-        PoshBot command to start VM.
+        PoshBot command to add note wiht current date to a VM.
     .EXAMPLE
         !addnote vm1
     #>
