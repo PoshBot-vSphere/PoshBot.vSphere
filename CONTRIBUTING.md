@@ -47,3 +47,6 @@ Tag me as a reviewer if you want...  Otherwise I will just watch the repo
 Click 'Create Pull Request'
 ```
 8. Thats it, I'll go in and review and approve and merge!  Done!  Once CI is setup it should copy all changes over to the poshbot-master bot we have setup in the Slack!
+
+I would probably create a new branch for each command you create and issue PRs subsequently, probably easier IMO.  Any questions, just ask...
+
