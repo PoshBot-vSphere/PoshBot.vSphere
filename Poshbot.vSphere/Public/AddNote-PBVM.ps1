@@ -19,7 +19,7 @@ function Start-PBVM {
     $creds = [pscredential]::new($Connection.Username, ($Connection.Password | ConvertTo-SecureString -AsPlainText -Force))
     $null = Connect-VIServer -Server $Connection.Server -Credential $creds
     if ($vm) {
-        $objects = Get-VM fritz-001 | Set-VM -Notes "last updated $(Get-Date)" -confirm:$false
+        $objects = Get-VM $vm | Set-VM -Notes "last updated $(Get-Date)" -confirm:$false
     }
     else {
         exit
