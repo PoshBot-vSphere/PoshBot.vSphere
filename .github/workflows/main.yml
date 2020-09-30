@@ -28,7 +28,7 @@ jobs:
         run: Remove-Item C:\poshbot\plugins\Poshbot.vSphere -Force -Confirm:$false -Recurse
 
       - name: copy new module
-        run: cd .\PoshBot.vSphere\ && Copy-Item PoshBot.vSphere C:\poshbot\plugins\ -Recurse
+        run: Copy-Item PoshBot.vSphere C:\poshbot\plugins\ -Recurse
 
       - name: Start Service
         run: net start poshbot-master
