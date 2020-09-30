@@ -22,7 +22,7 @@ function Get-PBFolder {
         $objects = Get-Folder $folder
     }
     else {
-        $objects = Get-Folder
+        $objects = Get-Folder | select Name | ft
     }
     
     $ResponseSplat = @{
