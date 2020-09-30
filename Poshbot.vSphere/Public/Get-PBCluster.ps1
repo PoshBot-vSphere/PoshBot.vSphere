@@ -22,7 +22,7 @@ function Get-PBCluster {
         $objects = Get-Cluster $cluster
     }
     else {
-        $objects = Get-Cluster
+        $objects = Get-Cluster | select Name
     }
     
     $ResponseSplat = @{
