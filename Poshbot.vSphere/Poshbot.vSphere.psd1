@@ -74,6 +74,7 @@
         'Get-PBVM',
         'Stop-PBVMGuest',
         'Start-PBVM',
+        'Restart-PBVMGuest',
         'Get-PBHost'
     )
 
