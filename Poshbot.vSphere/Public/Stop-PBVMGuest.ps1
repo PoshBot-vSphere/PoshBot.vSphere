@@ -19,10 +19,10 @@ function Stop-PBVMGuest {
     $creds = [pscredential]::new($Connection.Username, ($Connection.Password | ConvertTo-SecureString -AsPlainText -Force))
     $null = Connect-VIServer -Server $Connection.Server -Credential $creds
     if ($vm) {
-        $objects = Get-VM $vm
+        $objects = Stop-VMGuest $vm -Confirm:$false
     }
     else {
-        $objects = Get-VM
+        exit
     }
     
     $ResponseSplat = @{
