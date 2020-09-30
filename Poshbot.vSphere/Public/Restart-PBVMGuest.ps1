@@ -11,7 +11,7 @@ function Restart-PBVMGuest {
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]
         [hashtable]$Connection,
-        [parameter(Position = 0, Mandatory = $false, ValueFromRemainingArguments = $true)]
+        [parameter(Position = 0, Mandatory = $true, ValueFromRemainingArguments = $true)]
         [string[]]$vm
     )
 
@@ -24,7 +24,7 @@ function Restart-PBVMGuest {
     else {
         exit
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true
