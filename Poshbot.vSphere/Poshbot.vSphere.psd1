@@ -73,6 +73,7 @@
     FunctionsToExport = @(
         'Get-PBVM',
         'Stop-PBVMGuest',
+        'Start-PBVM',
         'Get-PBHost'
     )
 
