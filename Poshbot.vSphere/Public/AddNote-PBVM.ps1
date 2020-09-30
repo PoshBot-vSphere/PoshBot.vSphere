@@ -3,9 +3,9 @@ function AddNote-PBVM {
     .SYNOPSIS
         PoshBot command to start VM.
     .EXAMPLE
-        !startvm vm1
+        !addnote vm1
     #>
-    [PoshBot.BotCommand(CommandName = 'startvm')]
+    [PoshBot.BotCommand(CommandName = 'addnote')]
     [cmdletbinding()]
     param(
         [PoshBot.FromConfig()]
