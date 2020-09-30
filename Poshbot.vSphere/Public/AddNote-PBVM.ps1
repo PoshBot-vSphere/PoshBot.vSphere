@@ -1,4 +1,4 @@
-function Start-PBVM {
+function AddNote-PBVM {
     <#
     .SYNOPSIS
         PoshBot command to start VM.
