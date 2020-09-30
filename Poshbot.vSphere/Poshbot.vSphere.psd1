@@ -73,6 +73,7 @@
     FunctionsToExport = @(
         'Get-PBVM',
         'Get-PBConsole',
+        'Get-PBFolder',
         'Get-PBHost'
     )
 
