@@ -22,7 +22,7 @@ function Get-PBVM {
         $objects = Get-VM $vm
     }
     else {
-        $objects = Get-VM
+        $objects = Get-VM | select Name | ft
     }
     
     $ResponseSplat = @{

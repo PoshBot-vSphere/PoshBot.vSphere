@@ -22,7 +22,7 @@ function Get-PBHost {
         $objects = Get-VMHost $host
     }
     else {
-        $objects = Get-VMHost
+        $objects = Get-VMHost | select Name | ft
     }
     
     $ResponseSplat = @{
