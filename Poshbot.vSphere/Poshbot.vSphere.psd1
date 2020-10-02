@@ -71,29 +71,30 @@
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     # FunctionsToExport = '*'
     FunctionsToExport = @(
-        'Get-PBVM',
-        'Stop-PBVMGuest',
-        'Start-PBVM',
-        'Restart-PBVMGuest',
-        'Get-PBHost',
+        'Add-PBVMNote',
+        'Add-PBVMTag',
         'Get-PBCluster',
-        'Get-PBFolder',
         'Get-PBContentLibrary',
         'Get-PBContentLibraryItem',
         'Get-PBDatacenter',
         'Get-PBDatastore',
+        'Get-PBDatastoreCapacityAll',
+        'Get-PBFolder',
+        'Get-PBHost'
         'Get-PBResourcePool',
         'Get-PBTemplate',
+        'Get-PBVM',
+        'Get-PBVMAllWithTag',
         'Get-PBVMSnapshot',
-        'Remove-PBVMSnapshot',
-        'New-PBVMSnapshot',
-        'Add-PBVMNote',
-        'Get-PBDatastoreCapacityAll',
-        'New-PBTagCategory',
-        'New-PBTag',
-        'Add-PBVMTag',
         'Get-PBVMTag',
-        'Get-PBVMAllWithTag'
+        'New-PBTag',
+        'New-PBTagCategory',
+        'New-PBVMSnapshot',
+        'Open-PBVMConsoleWindow',
+        'Remove-PBVMSnapshot',
+        'Restart-PBVMGuest',
+        'Start-PBVM',
+        'Stop-PBVMGuest'
     )
 
     # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
