@@ -87,7 +87,7 @@
         'Get-PBVMSnapshot',
         'Remove-PBVMSnapshot',
         'New-PBVMSnapshot',
-        'AddNote-PBVM',
+        'Add-PBVMNote.ps1',
         'Get-PBDatastoreCapacityAll',
         'Open-PBVMConsoleWindow'
     )
