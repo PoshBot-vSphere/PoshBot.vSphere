@@ -1,4 +1,4 @@
-function AddNote-PBVM {
+function Add-PBVMNote {
     <#
     .SYNOPSIS
         PoshBot command to add note wiht current date to a VM.
