@@ -7,6 +7,7 @@ When an end user complains of not being able to access a servce - quickly get th
 
 Manage Snapshots, manage VMs, configure Tags, gather information about your environment, start and stop VMs - all without leaving the Slack workspace!
 
+This project was spawned from the VMware {code} Hackathon 2020 - so it may be a little rough around the edges.  But with a little help, and some teamwork - we can grow this!
 ## Getting Started
 Here are the steps to getting started with the vSphere PoshBot Plugin
 
