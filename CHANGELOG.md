@@ -17,6 +17,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## Unreleased
 
 ### Changed
+### Fixed
+### Added
+
+## [0.0.2] Release
+
+### Highlights
+* Module now part of an organization, rather than in my personal repo
+* Documentation makes more sense now to public, rather than being geared at the Hackathon team members
+* GitHub Actions disabled for the time being
+
+### Changed
 * Moved repository to its own organization
 * Modified `Readme` for more clear instructions
 * Modified the Contributer Guide to more clearly outline the process
