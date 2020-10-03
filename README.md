@@ -149,3 +149,4 @@ Adding and configuring the vSphere Poshbot plugin can be accomplished with the f
   - In order for a command to be available, it must be added to the `FunctionsToExport` array inside `PoshBot.vSphere.psd1`
   - We will soon have the requirement for unit tests as well, but in the effort to get this project moving, they are not required at the moment
   - Simply issue a Pull request with your desired changes to the master branch of this repository, we will review, and merge - Easy Peasy!
+  For complete instructions about how to contribute, check out our [Contributing Guide](CONTRIBUTING.md)
