@@ -1,4 +1,7 @@
-﻿# Contributing to the PoshBot.vSphere Plugin
+# Contributing to the PoshBot.vSphere Plugin
+We are so happy you are willing to help! Honestly, whether it's code related (new commands, code fixes, enhancements, bugs) or even non-code contributions (documentation, spelling, videos, localization) we will 100% accept the help!  Also - we are here to help.  This is a great project that was born out of the VMware {Code} 2020 Hackathon.  Hackathons promote learning and we intend to keep it that way. This is a great project to start to get used to things like forking and pull requests - reach out if you have any questions at all.
+
+The PoshBot.vSphere plugin follows the GitHub flow methodology.  Basically, fork the repository, pull it down local, create a branch, commit some changes, push to back to your forked copy, and issue a Pull Request.  We will review and merge!  It's as easy as that!
 
 ## Steps for hackathon team to push code to the repo
 1. Create a new directory and clone the repository (only need to do this once)
