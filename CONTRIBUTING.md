@@ -1,9 +1,15 @@
 # Contributing to the PoshBot.vSphere Plugin
 We are so happy you are willing to help! Honestly, whether it's code related (new commands, code fixes, enhancements, bugs) or even non-code contributions (documentation, spelling, videos, localization) we will 100% accept the help!  Also - we are here to help.  This is a great project that was born out of the VMware {Code} 2020 Hackathon.  Hackathons promote learning and we intend to keep it that way. This is a great project to start to get used to things like forking and pull requests - reach out if you have any questions at all.
 
-The PoshBot.vSphere plugin follows the GitHub flow methodology.  Basically, fork the repository, pull it down local, create a branch, commit some changes, push to back to your forked copy, and issue a Pull Request.  We will review and merge!  It's as easy as that!
+***Note*** The dev branch is the main working branch on this repo - it's where you will find all of the new features, functionality, and bug fixes. You can only submit Pull Requests to the dev branch.  Master is protected and will only be updated when we deem enough functionality to warrant a new release to the PowerShell Gallery.
 
-## Steps for hackathon team to push code to the repo
+The PoshBot.vSphere plugin follows the GitHub flow methodology.  Basically, fork the repository, pull it down local, create a branch (based off dev), commit some changes, push to back to your forked copy, and issue a Pull Request.  We will review and merge!  It's as easy as that!
+
+If you know exactly what's happening - go ahead and contribute away - if you need a little push, let me walk you through a common scenario of creating a new command...
+
+## Common Scenario for creating a new PoshBot.vSphere command
+1. First things first, you will need to fork this repo to your own GitHub account.  This part is easy, and completely GUI based.  Head to this repositories [landing page](https://github.com/PoshBot-vSphere/PoshBot.vSphere).  See that cool little `Fork` option in the top right hand corner - yeah, click it!
+
 1. Create a new directory and clone the repository (only need to do this once)
 ```
 mkdir c:\pb
