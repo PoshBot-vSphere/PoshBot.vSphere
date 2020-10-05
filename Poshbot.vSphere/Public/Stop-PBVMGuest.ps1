@@ -6,7 +6,7 @@ function Stop-PBVMGuest {
         !stopvm vm1
     #>
     [PoshBot.BotCommand(CommandName = 'stopvm')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]

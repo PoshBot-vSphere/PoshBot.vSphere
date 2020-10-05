@@ -22,9 +22,9 @@ function Get-PBHost {
         $objects = Get-VMHost $host
     }
     else {
-        $objects = Get-VMHost | select Name | ft
+        $objects = Get-VMHost | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

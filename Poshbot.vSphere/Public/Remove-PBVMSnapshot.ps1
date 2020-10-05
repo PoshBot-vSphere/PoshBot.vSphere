@@ -6,7 +6,7 @@
         !getvmsnapshot -vm VM01
     #>
     [PoshBot.BotCommand(CommandName = 'removevmsnapshot')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory=$true)]
@@ -28,10 +28,10 @@
     $null = Connect-VIServer -Server $Connection.Server -Credential $creds
 
     if ($all) {
-        $objects = Get-Snapshot -VM $vm | Remove-Snapshot -Confirm:$false
+        $null = Get-Snapshot -VM $vm | Remove-Snapshot -Confirm:$false
     }
     else {
-        $objects = Get-Snapshot -VM $vm -Name $name | Remove-Snapshot -Confirm:$false
+        $null = Get-Snapshot -VM $vm -Name $name | Remove-Snapshot -Confirm:$false
     }
 
 

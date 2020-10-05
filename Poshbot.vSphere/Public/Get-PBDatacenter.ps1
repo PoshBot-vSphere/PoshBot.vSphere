@@ -22,9 +22,9 @@ function Get-PBDatacenter {
         $objects = Get-Datacenter $dc
     }
     else {
-        $objects = Get-Datacenter | select Name | ft
+        $objects = Get-Datacenter | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true
