@@ -6,7 +6,7 @@ function New-PBTagCategory {
         !newtagcategory tagCateg1
     #>
     [PoshBot.BotCommand(CommandName = 'newtagcategory')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]

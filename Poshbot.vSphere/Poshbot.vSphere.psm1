@@ -1,6 +1,3 @@
-#Module vars
-$ModulePath = $PSScriptRoot
-
 #Get public and private function definition files.
 $Public = Get-ChildItem $PSScriptRoot\Public\*.ps1 -ErrorAction SilentlyContinue
 $Private = Get-ChildItem $PSScriptRoot\Private\*.ps1 -ErrorAction SilentlyContinue

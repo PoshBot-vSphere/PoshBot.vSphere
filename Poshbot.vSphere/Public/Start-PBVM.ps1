@@ -6,7 +6,7 @@ function Start-PBVM {
         !startvm vm1
     #>
     [PoshBot.BotCommand(CommandName = 'startvm')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]

@@ -22,9 +22,9 @@ function Get-PBResourcePool {
         $objects = Get-ResourcePool $pool
     }
     else {
-        $objects = Get-ResourcePool | select Name | ft
+        $objects = Get-ResourcePool | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

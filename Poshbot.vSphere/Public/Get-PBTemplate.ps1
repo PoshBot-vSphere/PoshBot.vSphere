@@ -22,9 +22,9 @@ function Get-PBTemplate {
         $objects = Get-Template $template
     }
     else {
-        $objects = Get-Template | select Name | ft
+        $objects = Get-Template | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

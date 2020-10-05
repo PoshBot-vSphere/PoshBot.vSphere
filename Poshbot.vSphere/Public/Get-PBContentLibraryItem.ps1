@@ -22,9 +22,9 @@ function Get-PBContentLibraryItem {
         $objects = Get-ContentLibraryItem $item
     }
     else {
-        $objects = Get-ContentLibraryItem | select Name | ft
+        $objects = Get-ContentLibraryItem | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

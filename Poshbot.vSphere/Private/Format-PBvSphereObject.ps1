@@ -20,7 +20,7 @@ function Format-PBvSphereObject {
                 Position = 1)]
             [string] $FunctionName
         )
-    
+
         if (($object.count -eq 0) -or (-not $object)) {
             $msg = 'No {0} found'
             switch ($functionname) {

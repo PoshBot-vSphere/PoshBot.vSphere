@@ -22,9 +22,8 @@ function Get-PBCluster {
         $objects = Get-Cluster $cluster
     }
     else {
-        $objects = Get-Cluster | select Name
+        $objects = Get-Cluster | Select-Object Name
     }
-    
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

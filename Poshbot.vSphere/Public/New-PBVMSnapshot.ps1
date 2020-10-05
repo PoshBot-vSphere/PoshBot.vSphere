@@ -6,7 +6,7 @@
         !newvmsnapshot -vm VM01 -name 'snapshot' -Description 'before upgrade'
     #>
     [PoshBot.BotCommand(CommandName = 'newvmsnapshot')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]

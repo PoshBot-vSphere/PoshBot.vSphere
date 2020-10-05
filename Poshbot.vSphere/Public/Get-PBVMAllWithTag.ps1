@@ -19,7 +19,7 @@ function Get-PBVMAllWithTag {
     $creds = [pscredential]::new($Connection.Username, ($Connection.Password | ConvertTo-SecureString -AsPlainText -Force))
     $null = Connect-VIServer -Server $Connection.Server -Credential $creds
     if ($tag) {
-        $objects = (Get-TagAssignment | Where {$_.Tag.Name -eq $tag}).Entity | Select Name
+        $objects = (Get-TagAssignment | Where-Object {$_.Tag.Name -eq $tag}).Entity | Select-Object Name
     }
     else {
         exit
