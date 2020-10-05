@@ -22,9 +22,9 @@ function Get-PBFolder {
         $objects = Get-Folder $folder
     }
     else {
-        $objects = Get-Folder | select Name | ft
+        $objects = Get-Folder | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

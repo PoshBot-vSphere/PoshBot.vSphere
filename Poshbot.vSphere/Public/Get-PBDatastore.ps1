@@ -22,9 +22,9 @@ function Get-PBDatastore {
         $objects = Get-Datastore $ds
     }
     else {
-        $objects = Get-Datastore | select Name | ft
+        $objects = Get-Datastore | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

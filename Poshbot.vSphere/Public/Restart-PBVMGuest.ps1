@@ -6,7 +6,7 @@ function Restart-PBVMGuest {
         !restartvm vm1
     #>
     [PoshBot.BotCommand(CommandName = 'restartvm')]
-    [cmdletbinding()]
+    [cmdletbinding(SupportsShouldProcess)]
     param(
         [PoshBot.FromConfig()]
         [parameter(Mandatory)]

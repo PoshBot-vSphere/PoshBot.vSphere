@@ -24,7 +24,6 @@ function Open-PBVMConsoleWindow {
     else {
         Exit
     }
-    
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true

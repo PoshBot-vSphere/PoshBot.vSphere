@@ -22,9 +22,9 @@ function Get-PBVM {
         $objects = Get-VM $vm
     }
     else {
-        $objects = Get-VM | select Name | ft
+        $objects = Get-VM | Select-Object Name | Format-Table
     }
-    
+
     $ResponseSplat = @{
         Text = Format-PBvSphereObject -Object $objects -FunctionName $MyInvocation.MyCommand.Name
         AsCode = $true
